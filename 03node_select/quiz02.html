@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+        <div class="hi">단어를 선택하세요</div>
+
+    <select id="sel">
+        <option value ="단어를 선택하세요">선택</option>
+        <option value ="영어입니다">hello</option>
+        <option value ="한국어입니다">안녕</option>
+        <option value ="중국어입니다">安寧</option>
+       
+    </select>
+  
+
+    <script>
+       
+       var sel = document.getElementById("sel");
+        var hi = document.querySelector(".hi"); 
+      
+        sel.onchange = function() {
+            if(sel.value=="영어입니다") hi.innerHTML=sel.value;
+            else if(sel.value=="한국어입니다") hi.innerHTML=sel.value;
+            else if(sel.value=="중국어입니다") hi.innerHTML=sel.value;
+            else {
+                hi.innerHTML=sel.value;
+            }
+        }
+    </script>
+</body>
+</html>
