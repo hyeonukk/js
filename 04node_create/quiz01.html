@@ -12,6 +12,7 @@
             border: 1px solid black;
         }
     </style>
+
 </head>
 <body>
     <button type="button" id="addLists">5개추가하기</button>
@@ -33,32 +34,44 @@
                 <td><input type="text" size="5"></td>
                 <td><input type="text"></td>
             </tr>
+            <!-- ................. -->
         </tbody>
-        
     </table>
 
     <script>
-        var addList = document.getElementById("addList"); //1개추가
+        var addList = document.getElementById("addList");
         addList.onclick = function() {
-            //tr은 1개, td는 4개
-            var tr = document.createElement("tr"); //tr 생성
-          //(1번방법)
-            // tr.innerHTML = '<td><input type="text" size="3"></td>' +
-            //     '<td><input type="text"></td>' +
-            //     '<td><input type="text" size="5"></td>' +
-            //     '<td><input type="text"></td>';
-                
+            createTag();
+        }
+
+        var addLists = document.getElementById("addLists");
+        addLists.onclick = function() {
+            for(var i = 1; i <= 5; i++) {
+                createTag();
+            }
+        }
+
+        //tr은 1개, td는 4개
+        function createTag() {
+            var tr = document.createElement("tr");
+            tr.innerHTML = '<td><input type="text" size="3"></td>' +
+                           '<td><input type="text"></td>' +
+                           '<td><input type="text" size="5"></td>' +
+                           '<td><input type="text"></td>';
             
-            var td = document.createElement("td");
-                td.innerHTML = '<input type="text" size="3">';
+            // 곱하기4
+            // var td = document.createElement("td");
+            // td.innerHTML = '<input type="text" size="3">';
+            //......
 
             document.querySelector(".todoList").appendChild(tr);
         }
-        
-        function createTag() {
-            
-        }
-       
+
     </script>
+
+
+
+
+
 </body>
 </html>
