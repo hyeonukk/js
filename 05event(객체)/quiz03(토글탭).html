@@ -47,14 +47,16 @@
     -->
     
     <script>
-        var toggle = document.querySelector(".toggle");
+        var toggle = document.querySelector(".toggle"); 
         toggle.onclick = function() {
             if(event.target.tagName != "LI") return; 
-            var data = event.target.dataset.id;
+           
+            var toggle_id = event.target.dataset.id;
        
-            var tma = document.querySelector(".toggle-menu active");
-            if(tma != null ) {tma.target.classList.remove('active');
-        }
+            var tma = document.querySelector(".toggle-menu.active");
+            if(tma != null ) {tma.classList.remove('active');
+        } document.querySelector(toggle_id).classList.add('active');
+        
         
         
     }
