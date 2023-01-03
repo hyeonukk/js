@@ -44,6 +44,7 @@
         addBtn.onclick = function() {
 
             var li = document.createElement("li");
+            
             li.innerHTML = todo.value;
             todo.value = ""; //사용자입력값 초기화
             //li.innerHTML = todo.value + "<button onclick='remove(this);'>삭제</button>"; //사용자입력값
@@ -62,7 +63,8 @@
             //btn3 - 위로
             var btn3 = document.createElement("button");
             btn3.innerHTML = "위로";
-            btn3.addEventListener("click", up);
+            // btn3.addEventListener("click", up);
+            btn3.onclick=up;
             li.appendChild(btn3);
 
             todoList.appendChild(li);

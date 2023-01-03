@@ -7,7 +7,31 @@
     <title>Document</title>
 </head>
 <body>
-    
+    <input type="text" id="id" placeholder="할일을 작성해보세요">
+    <button class="btnn">추가</button>
+
+    <ul class="list1">
+
+    </ul>
+
+    <script>
+        var list1 = document.querySelector(".list1");
+        var btnn = document.querySelector(".btnn");
+        var id = document.getElementById("id");
+        btnn.onclick = function(){
+            var li = document.createElement("li");
+            var a = document.createElement("a");
+            a.href ="#";
+            a.innerHTML = id.value;
+            id.value="";
+            li.appendChild(a);
+            list1.appendChild(li);
+        }
+    </script>
+
+
+
+
     <input type="text" class="todo" placeholder="할일을 작성해보세요">
     <button class="btn">추가</button>
 
@@ -35,9 +59,7 @@
 
     <hr>
 
-    <div id ="addList">
-
-    </div>
+    <div id ="addList"></div>
     <button id="add">추가</button>
 
     <script>
