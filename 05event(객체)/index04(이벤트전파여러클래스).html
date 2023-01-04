@@ -7,7 +7,7 @@
     <title>Document</title>
 </head>
 <body>
-    
+    <div class="list1"></div>
     <section id="section">
         <div class="list">
             <div>
@@ -34,6 +34,17 @@
     <script>
         var list = document.querySelector(".list")
         list.onclick = function() {
+
+        }
+    </script>
+
+
+
+
+    <script>
+        var list = document.querySelector(".list")
+        list.onclick = function() {
+         
             if(event.target.tagName != "BUTTON") return; // 버튼이 아니라면 종료
             // console.log(event.target.className);
             // console.log(event.target.classList);
@@ -43,8 +54,8 @@
             }else if (arr.contains("del")) {//삭제버튼
                 event.target.parentElement.remove();
             }else if (arr.contains("aaa")) {
-                
-            }
+            }  
+
         }
 
     </script>

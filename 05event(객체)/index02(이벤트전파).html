@@ -16,13 +16,17 @@
         <li class="item">4.강감찬</li>
         <li class="item">5.둘리</li>
     </ul>
-
-    선택한 태그의 값
+   
     <p class="result"></p>
-  
     <script>
+       var parent =  document.querySelector(".parent");
+       var result = document.querySelector(".result");
+       parent.onclick = function() {
+        result.innerHTML = event.target.innerHTML;
+       }
+   
         //부모에 이벤트를 걸면 자식한테 이벤트가 전파됩니다.
-        var parent = document.querySelector(".parent"); 
+         var parent = document.querySelector(".parent"); 
         var result = document.querySelector(".result");
         parent.onclick = function(e) { 
         //    result.innerHTML=  this.innerHTML; //여기서 this는 부모태그(ul)이다.
@@ -30,7 +34,7 @@
         // console.log(e); console.log(event); 둘중에 편리한거 사용하면 된다 .
             // console.log(event.target); //이벤트가 동작된 실제 태그
             // console.log(event.currentTarget); // 실제 이벤트가 걸려있는 태그(어디있는지)
-      
+            
         if(e.target.tagName != "LI") return; //LI 태그가 아니면 종료
         result.innerHTML = e.target.innerHTML;
 

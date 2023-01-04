@@ -29,6 +29,7 @@
         // func1.onclick = function() {
         //     alert("func1");
         // }
+   
 
         // var func2 = document.querySelector(".func2");
         // func2.onclick = function() {
@@ -47,9 +48,9 @@
     이벤트 캡쳐링 -> 부모, 자식에 이벤트가 있을 때, 부모 -> 자식으로 전파되는 특징
     addEventListener() 방식으로만 구현해 줄 수 있습니다.
     */
-        var func1 = document.querySelector(".func1");
-        var func2 = document.querySelector(".func2");
-        var func3 = document.querySelector(".func3");
+        var func1 = document.querySelector(".func1");//빨강
+        var func2 = document.querySelector(".func2");//파랑
+        var func3 = document.querySelector(".func3");//노랑
 
         func1.addEventListener("click", function(){
             alert("func1");

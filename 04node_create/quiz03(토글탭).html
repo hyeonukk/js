@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+
     <style>
         .toggle li {    
             display: inline-block;
@@ -16,11 +17,15 @@
         }
 
         .toggle-menu {display: none;}
-        .active { display: block; animation: fadeIn 1s ease-in-out; background-color: aquamarine; }
+        .active { 
+            display: block; 
+            animation: fadeIn 1s ease-in-out; 
+            background-color: aquamarine; 
+        }
 
-        /* 애니메이션 from에 있는것을 to에 있는것으로  바꿔준다.  */
+        /* 애니메이션 */
         @keyframes fadeIn {
-            from {      
+            from {
                 opacity: 0;
                 background-color: aqua;
                 margin-left: -100px;
@@ -30,47 +35,42 @@
                 margin-left: 0;
             }
         }
+
     </style>
+    
+    
 </head>
 <body>
-    <section>
-        <ul class="toggle">
-            <li data-id="#toggle1">메뉴1</li>
-            <li data-id="#toggle2">메뉴2</li>
-            <li data-id="#toggle3">메뉴3</li>
-        </ul>
-        
-        <div>
-            <div class="toggle-menu active" id="toggle1">
-                토글메뉴1
-            </div>
-            <div class="toggle-menu" id="toggle2">
-                토글메뉴2
-            </div>
-            <div class="toggle-menu" id="toggle3">
-                토글메뉴3
-            </div>
-        </div>
-    </section>
     
     <!--
     1. ul에 이벤트 버블링을 이용해서 클릭이벤트를 걸고 클릭되는 타겟의 data-id를 얻습니다.
     2. toggle-menu의 active속성을 삭제
     3. data-id의 값에 알맞는 태그에 active속성을 추가하면됩니다.
     -->
-    
-    <script>
-        // var toggle = document.querySelector(".toggle"); 
-        // toggle.onclick = function() {
-        //     if(event.target.tagName != "LI") return; 
-           
-        //     var toggle_id = event.target.dataset.id; //데이터에 접근
-       
-        //     var tma = document.querySelector(".toggle-menu.active");
-        //     if(tma != null ) {tma.classList.remove('active');
-        // } document.querySelector(toggle_id).classList.add('active');
-        
 
+    <section>
+        <ul class="toggle">
+            <li data-id="#toggle1">메뉴1</li>
+            <li data-id="#toggle2">메뉴2</li>
+            <li data-id="#toggle3">메뉴3</li>
+        </ul>
+
+        <div>
+            <div class="toggle-menu active" id="toggle1">
+                토글메뉴1
+            </div>
+            <div class="toggle-menu " id="toggle2">
+                토글메뉴2
+            </div>
+            <div class="toggle-menu " id="toggle3">
+                토글메뉴3
+            </div>
+            
+        </div>
+
+    </section>
+
+    <script>
         var toggle = document.querySelector(".toggle");
         toggle.onclick = function() {
             if(event.target.tagName != "LI") return;
@@ -86,9 +86,8 @@
             
             tag.classList.add("active"); //active추가
         }
-    
-    
-    
-     </script>
+    </script>
+
+
 </body>
 </html>
