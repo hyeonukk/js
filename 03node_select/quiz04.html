@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h3>js카운트 만들기 - this, innerHTML, value속성을 사용하면 된다.</h3>
+   
+    <input type="number" value="0" id="cnt">
+    <button onclick="calc(this)">증가</button> <!--이벤트 안에서의 this는 자기자신을 가르킨다.(태그를 받아온다.)-->
+    <button onclick="calc(this)">감소</button>
+
+
+    <script>
+       
+        var con = document.getElementById("cnt");
+        
+         function calc(a){ //a가 클릭한 태그 (this는 태그를 받아온다.)
+            if(a.innerHTML=='증가') {
+                cnt.value++; //cnt가 갖고 있는 값 증가.
+            }else {
+                if(cnt.value<=0) {
+                    alert('0보다 큰수를 입력하세요');
+                    return;
+             }
+             cnt.value; //cnt가 갖고 있는 값 감소.
+            }
+         }
+    </script>
+</body>
+</html>

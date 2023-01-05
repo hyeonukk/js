@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+        var date = new Date(); //현재시간 
+        var date = new Date(2023,0,4,); //월은 0부터 시작함 
+        var date = new Date(2023,0,4, 14, 22,00); //년원일 시분초   
+        console.log(date); 
+
+        //밑에 3개는 결과는 같고 형식만 다르게 나타낸거임(날짜의 포멧형식 변환 함수)
+        console.log ( date.toUTCString()) ;
+        console.log ( date.toLocaleTimeString() ) ;
+        console.log ( date.toISOString() );
+
+        //년 월 일 을 얻는 getter 
+        var milis = date.getTime();
+        console.log(milis); // 1970.1.1~ 현재까지 지난시간을 밀리초
+
+        var year = date.getFullYear(); //년
+        var month = date.getMonth() +1 ;    //월
+        var day = date.getDate();   //일
+
+        var hour = date.getHours(); //시간
+        var minutes = date.getMinutes(); //분
+        var seconds = date.getSeconds(); //초ㅓ
+        console.log(year+"년"+month+"월"+day+"일 "+ hour+"시"+minutes+"분"+seconds+"초");
+    </script>
+</body>
+</html>

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <select id="sel"> <!--기본이벤트-->
+        <option>1</option>
+        <option>2</option>
+        <option>3</option>
+    </select>
+    
+    <select onclick="aaa()"><!--인라인 이벤트-->
+        <option>1</option>
+        <option>2</option>
+        <option>3</option>
+    </select>
+
+  
+    <input type="text" onchange="함수();">  <!-- 인라인-->
+
+    <div id="db" ondblclick="">db클릭이벤트</div> <!--이벤트리스너-->
+
+    <script>
+       
+        
+        function aaa(){  //인라인
+            alert('경고');
+        }
+        
+        
+        var sel = document.getElementById("sel");  //기본
+        sel.onchange = function() {
+            console.log("체인지이벤트");
+        }
+
+        function 함수(){  //인라인
+            console.log("체인지이벤트");
+        }
+        var db = document.getElementById("db");  //이벤트리스너
+        db.addEventListener("dblclick",function() {
+            console.log("더블클릭이벤트");
+        });
+
+
+
+
+
+
+
+
+
+        //위에 있는 select와 input에 원하는 방법으로 change이벤트 사용해보기
+    </script>
+</body>
+</html>
