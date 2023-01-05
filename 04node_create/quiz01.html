@@ -39,7 +39,44 @@
             <!-- ................. -->
         </tbody>
     </table>
+    <script> //버튼, todolist 갖고오기 next 하기
+        var addList = document.getElementById("addList");
+        var todoList = document.querySelector(".todoList");
+    
+        addList.onclick =function() {
+            var tr = document.createElement("tr");
+            tr.innerHTML = '<td><input type="text" size="3"></td>' +
+                           '<td><input type="text"></td>' +
+                           '<td><input type="text" size="5"></td>' +
+                           '<td><input type="text"></td>';
+                          todoList.appendChild(tr);
+        }
+       
+        var addLists = document.getElementById("addLists");
+        var todoList = document.querySelector(".todoList");
+        addLists.onclick =function() {
+            
+            for(var i =0; i<5; i++) {
+                 var tr = document.createElement("tr");
+            tr.innerHTML = '<td><input type="text" size="3"></td>' +
+                           '<td><input type="text"></td>' +
+                           '<td><input type="text" size="5"></td>' +
+                           '<td><input type="text"></td>';
+                          todoList.appendChild(tr);
+        
+                        } 
+        }
+            
+        
+    </script>
 
+
+
+
+
+
+
+<!-- 
     <script>
         var addList = document.getElementById("addList");
         addList.onclick = function() {
@@ -69,7 +106,7 @@
             document.querySelector(".todoList").appendChild(tr);
         }
 
-    </script>
+    </script> -->
 
 
 

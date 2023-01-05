@@ -26,21 +26,21 @@
     </div>
     
     <script>
-        //(방법1)
-        // var slide = document.querySelector(".slide"); 
-        // var Count = 1; 
-        // setInterval(function() {
-        //  document.querySelector(".bgImg").remove();
-        //  var img = document.createElement("img");
-        //  img.src = "img/slide" + (Count++) + ".jpg";
-        //  img.classList.add("bgImg");
-        //  slide.appendChild(img);
-        //  if(imgCount>4) { imgCount=1;         
-        //  }   
-        // } , 1000 );  //1초마다 변경
+        (방법1) 
+        var slide = document.querySelector(".slide"); 
+        var Count = 1; 
+        setInterval(function() {
+         document.querySelector(".bgImg").remove();
+         var img = document.createElement("img");
+         img.src = "img/slide" + (Count++) + ".jpg";
+         img.classList.add("bgImg");
+         slide.appendChild(img);
+         if(imgCount>4) { imgCount=1;         
+         }   
+        } , 1000 );  //1초마다 변경
 
 
-        //방법(2)
+        // 방법(2)
         // var slide = document.querySelector(".slide ");
         // // var bgImg = document.querySelector(".bgImg");
         // var num =1;
@@ -63,20 +63,20 @@
      
      
         // (3)선생님답
-        // var num = 1; //시작은 다음요소부터 
-        // var arr = ['img/slide1.jpg', 'img/slide2.jpg', 'img/slide3.jpg', 'img/slide4.jpg'];
-        // setInterval(function() {
-        //     var img = document.createElement("img"); //태그생성
-        //     img.src = arr[num++];
-        //     img.classList.add("bgImg");
-        //     //remove
-        //    var slide =  document.querySelector(".slide");
-        //     slide.firstElementChild.remove();
-        //     //append
-        //     slide.appendChild(img);
+        var num = 1; //시작은 다음요소부터 
+        var arr = ['img/slide1.jpg', 'img/slide2.jpg', 'img/slide3.jpg', 'img/slide4.jpg'];
+        setInterval(function() {
+            var img = document.createElement("img"); //태그생성
+            img.src = arr[num++];
+            img.classList.add("bgImg");
+            //remove
+           var slide =  document.querySelector(".slide");
+            slide.firstElementChild.remove();
+            //append
+            slide.appendChild(img);
         
-        //     if(num == arr.length) num = 0;
-        // }, 1000);
+            if(num == arr.length) num = 0;
+        }, 1000);
         
     </script>
 </body>
